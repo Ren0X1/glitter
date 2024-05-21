@@ -12,10 +12,10 @@
   "background": {
     "scripts": ["background.js"]
   },
-  "permissions": ["activeTab", "tabs", "cookies", "*://twitter.com/*"],
+  "permissions": ["activeTab", "tabs", "cookies", "*://x.com/*"],
   "content_scripts": [
     {
-      "matches": ["*://twitter.com/*"],
+      "matches": ["*://x.com/*"],
       "css": ["css/override.css"],
       "js": ["js/twitter.js"]
     }

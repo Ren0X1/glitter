@@ -25,7 +25,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     setTimeout(() => {
       chrome.cookies.set(
         {
-          url: 'https://twitter.com',
+          url: 'https://x.com',
           name: 'previousurl',
           value: changeInfo.url,
           expirationDate: new Date().getTime() + 10 * 365 * 24 * 60 * 60,

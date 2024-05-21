@@ -1,6 +1,6 @@
 themes.forEach((theme) => {
   chrome.cookies.get(
-    { url: 'https://twitter.com', name: theme.name },
+    { url: 'https://x.com', name: theme.name },
     function (cookie) {
       if (
         cookie &&
@@ -13,7 +13,7 @@ themes.forEach((theme) => {
       } else {
         chrome.cookies.set(
           {
-            url: 'https://twitter.com',
+            url: 'https://x.com',
             name: theme.name,
             value: JSON.stringify(theme),
             expirationDate: new Date().getTime() + 10 * 365 * 24 * 60 * 60,

@@ -36,7 +36,7 @@ const changeTheme = (themeName) => {
 
   chrome.cookies.get(
     {
-      url: 'https://twitter.com',
+      url: 'https://x.com',
       name: themeName,
     },
     function (cookie) {
@@ -52,7 +52,7 @@ const changeTheme = (themeName) => {
 
       chrome.cookies.set(
         {
-          url: 'https://twitter.com',
+          url: 'https://x.com',
           name: 'theme',
           value: themeName,
           expirationDate: new Date().getTime() + 10 * 365 * 24 * 60 * 60,
@@ -134,7 +134,7 @@ const setInputValue = (name, element) => {
   console.log('ELEMENT VALUE: ', element.value);
 
   chrome.cookies.get(
-    { url: 'https://twitter.com', name: name },
+    { url: 'https://x.com', name: name },
     function (cookie) {
       if (cookie) {
         element.value = cookie.value || themes[0][name];
@@ -152,7 +152,7 @@ const updateInputValue = (input, value) => {
 const updateCookie = (name, value) => {
   chrome.cookies.set(
     {
-      url: 'https://twitter.com',
+      url: 'https://x.com',
       name: name,
       value: value,
       expirationDate: new Date().getTime() + 10 * 365 * 24 * 60 * 60,
@@ -254,7 +254,7 @@ newThemeButton.addEventListener('click', (e) => {
   if (document.body.classList.contains('edit')) {
     chrome.cookies.remove(
       {
-        url: 'https://twitter.com',
+        url: 'https://x.com',
         name: selectedTheme,
       },
       function () {
@@ -290,7 +290,7 @@ newThemeButton.addEventListener('click', (e) => {
 
     chrome.cookies.get(
       {
-        url: 'https://twitter.com',
+        url: 'https://x.com',
         name: selectedTheme,
       },
       function (cookie) {
@@ -330,7 +330,7 @@ editButton.addEventListener('click', (e) => {
 
     chrome.cookies.get(
       {
-        url: 'https://twitter.com',
+        url: 'https://x.com',
         name: selectedTheme,
       },
       function (cookie) {
@@ -350,7 +350,7 @@ editButton.addEventListener('click', (e) => {
 
     chrome.cookies.get(
       {
-        url: 'https://twitter.com',
+        url: 'https://x.com',
         name: selectedTheme,
       },
       function (cookie) {
@@ -367,7 +367,7 @@ editButton.addEventListener('click', (e) => {
 saveButton.addEventListener('click', (e) => {
   chrome.cookies.get(
     {
-      url: 'https://twitter.com',
+      url: 'https://x.com',
       name: selectedTheme,
     },
     function (cookie) {
@@ -379,7 +379,7 @@ saveButton.addEventListener('click', (e) => {
 
       chrome.cookies.set(
         {
-          url: 'https://twitter.com',
+          url: 'https://x.com',
           name: selectedTheme,
           value: JSON.stringify(theme),
           expirationDate: new Date().getTime() + 10 * 365 * 24 * 60 * 60,
@@ -415,7 +415,7 @@ createButton.addEventListener('click', (e) => {
 
   chrome.cookies.set(
     {
-      url: 'https://twitter.com',
+      url: 'https://x.com',
       name: theme.name,
       value: JSON.stringify(theme),
       expirationDate: new Date().getTime() + 10 * 365 * 24 * 60 * 60,
@@ -425,7 +425,7 @@ createButton.addEventListener('click', (e) => {
 
   chrome.cookies.set(
     {
-      url: 'https://twitter.com',
+      url: 'https://x.com',
       name: 'theme',
       value: `theme-${title.value.toLowerCase().replace(/ /, '')}`,
       expirationDate: new Date().getTime() + 10 * 365 * 24 * 60 * 60,
@@ -462,7 +462,7 @@ createButton.addEventListener('click', (e) => {
 //////////////////////////////////////////////////////////////////////////////////////////////
 chrome.cookies.getAll(
   {
-    url: 'https://twitter.com',
+    url: 'https://x.com',
   },
   function (array) {
     const themes = {};
@@ -631,7 +631,7 @@ chrome.cookies.getAll(
 
     chrome.cookies.get(
       {
-        url: 'https://twitter.com',
+        url: 'https://x.com',
         name: 'theme',
       },
       function (cookie) {
@@ -645,7 +645,7 @@ chrome.cookies.getAll(
 
               chrome.cookies.get(
                 {
-                  url: 'https://twitter.com',
+                  url: 'https://x.com',
                   name: presetButton.id,
                 },
                 function (newCookie) {
@@ -668,7 +668,7 @@ chrome.cookies.getAll(
               selectedTheme = presetButton.id;
               chrome.cookies.get(
                 {
-                  url: 'https://twitter.com',
+                  url: 'https://x.com',
                   name: presetButton.id,
                 },
                 function (newCookie) {
@@ -706,7 +706,7 @@ chrome.cookies.getAll(
               selectedTheme = presetButton.id;
               chrome.cookies.get(
                 {
-                  url: 'https://twitter.com',
+                  url: 'https://x.com',
                   name: presetButton.id,
                 },
                 function (newCookie) {
