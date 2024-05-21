@@ -8,7 +8,7 @@
 </h1>
 <br>
 <p align="center">
-  Glitter is a Chrome extension that allows you to create custom Twitter themes
+  Glitter is a Chrome extension that allows you to create custom Twitter / X themes
 </p>
 
 ## Contributing
